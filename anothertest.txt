@@ -1,2 +1,18 @@
 LOL ENGLISH ISN'T YOUR FIRST LANGUAGE
 PRESS 1 IF IT COVERS EVERYTHING EXCEPT A ROLL TO THE RIGHT
+
+
+
+HI THIS MESSAGE IS FROM
+
+
+ a_test_branch
+
+
+message:
+
+Master branch sucks!
+
+sincerely,
+
+a_test_branch
