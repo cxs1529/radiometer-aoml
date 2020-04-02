@@ -252,7 +252,7 @@ void loop()
     }
     else if((analog_Max>=0.4)&&(analog_Max<1.8))
     {
-      analog_Max = pow((analog_Max/alpha1),Beta1);//root -0.101 of analog_Max/364.29  
+      analog_Max = pow((analog_Max/alpha2),Beta2);//root -0.101 of analog_Max/364.29  
       irrad_Max = analog_Max*irrScale;
     }
     else
