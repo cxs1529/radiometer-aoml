@@ -19,3 +19,5 @@ Along the process the uploading progress will be shown in %.
 If the process needs to be stoped, type "stop" to the serial monitor. The uploading process will finish once the current file is uploaded.
 
 04132012.txt is a sample file created for a 15 minutes period for each file. 
+
+** Check ARDUINO MKRGSM1400 FTP - instructions.zip to make the program work on the MKRGSM1400 **
