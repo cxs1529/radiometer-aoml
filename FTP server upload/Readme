@@ -1,0 +1,21 @@
+This code is based on the MKRGSM FTP library: https://github.com/tryhus/MKRGSM/tree/feature/ftp
+
+An Arduino MKR GSM 1400 with a SIM card with internet is needed for this project.
+
+The program reads 2 analog values and with a time stamp creates a string with a fixed format MMDDYYhhmmssAAAABBBB every second (this can be changed in line 239). 
+The string may be "compressed" to reduce data traffic, changing the number's base, from decimal to other base like hexadecimal or base 36 (using 0-9...A-Z). The latter will reduce the Max number of 12319923595999999999 (20 char) to DDDDTTTTAAAAAAAA ( 14 char -30%). Convert Dat, time and analog values before, adding a '1' as he MSD to keep the structure.
+i.e. Date: 1123199 -> change base / Time: 1235959 ->change base / Values: 199999999 -> change base
+A code will be run on the PC the decode the strings back to their decimal values.
+
+Then a .txt file with name MMDDYYhh ( or MMDDYYhhmm if files are created every less than an hour) is uploaded (streamed) to an FTP server.
+
+At the beginning of the program the user is required to enter through the serial monitor the time size of samples that each file has.
+i.e. if 60 is entered, a file will be created every 60 seconds, containing 60 strings with the predefined format. 900 for a file every 15 minutes and so on.
+
+Then set the date and time to start the RTC.
+
+Along the process the uploading progress will be shown in %.
+
+If the process needs to be stoped, type "stop" to the serial monitor. The uploading process will finish once the current file is uploaded.
+
+04132012.txt is a sample file created for a 15 minutes period for each file. 
